@@ -363,9 +363,14 @@
 
                 <div class="d-flex gap-2 mt-3">
 
-                    <button class="btn btn-dark btn-lg w-50">Download CV</button>
+                    <a href="{{ asset('FloresCV.pdf') }}" download class="btn btn-dark btn-lg w-50">
+                        Download CV
+                    </a>
 
-                    <button class="btn btn-dark btn-lg w-50">LinkedIn</button>
+                    <a href="https://www.linkedin.com/in/liam-flores-a843983a6/" target="_blank"
+                        class="btn btn-dark btn-lg w-50">
+                        LinkedIn
+                    </a>
 
                 </div>
 
