@@ -602,11 +602,6 @@
                                     system.</div>
                                 <div style="font-size:13px; color:#888; margin-top:6px;">Laravel • PHP • MySQL</div>
                             </div>
-                            <div class="p-3 border rounded-3">
-                                <div style="font-size:18px; font-weight:600;">UI/UX Design Works</div>
-                                <div style="font-size:15px; color:#555;">Branding and publication materials.</div>
-                                <div style="font-size:13px; color:#888; margin-top:6px;">Figma • Canva</div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -838,38 +833,133 @@
                         <div class="row g-3">
                             <div class="col-6 col-sm-6 col-md-6">
                                 <div class="p-3 border rounded-3 hobby-card text-center">
-                                    <div class="fw-semibold" style="font-size: 18px;">🎨 Design</div>
-                                    <div class="text-muted" style="font-size:13px;">UI/UX & layouts</div>
+
+                                    <!-- Icon -->
+                                    <div class="mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M3 21v-4a4 4 0 1 1 4 4h-4" />
+                                            <path d="M21 3a16 16 0 0 0 -12.8 10.2" />
+                                            <path d="M21 3a16 16 0 0 1 -10.2 12.8" />
+                                            <path d="M10.6 9a9 9 0 0 1 4.4 4.4" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="fw-semibold" style="font-size: 18px;">Digital Art</div>
+                                    <div class="text-muted" style="font-size:13px;">Vector/Vexel</div>
+
                                 </div>
                             </div>
+                            <!-- Coding -->
                             <div class="col-6 col-sm-6 col-md-6">
                                 <div class="p-3 border rounded-3 hobby-card text-center">
-                                    <div class="fw-semibold" style="font-size: 18px;">💻 Coding</div>
-                                    <div class="text-muted" style="font-size:13px;">Building web apps</div>
+
+                                    <div class="mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M2 8a2 2 0 0 1 2 -2h16a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-16a2 2 0 0 1 -2 -2z" />
+                                            <path d="M6 10l0 .01" />
+                                            <path d="M10 10l0 .01" />
+                                            <path d="M14 10l0 .01" />
+                                            <path d="M18 10l0 .01" />
+                                            <path d="M6 14l0 .01" />
+                                            <path d="M18 14l0 .01" />
+                                            <path d="M10 14l4 .01" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="fw-semibold" style="font-size:18px;">Coding</div>
+                                    <div class="text-muted" style="font-size:13px;">Web Development</div>
+
                                 </div>
                             </div>
+
+                            <!-- Gaming -->
                             <div class="col-6 col-sm-6 col-md-6">
                                 <div class="p-3 border rounded-3 hobby-card text-center">
-                                    <div class="fw-semibold" style="font-size: 18px;">🎮 Gaming</div>
-                                    <div class="text-muted" style="font-size:13px;">Strategy & RPG</div>
+
+                                    <div class="mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4" />
+                                            <path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232" />
+                                            <path d="M8 9v2" />
+                                            <path d="M7 10h2" />
+                                            <path d="M14 10h2" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="fw-semibold" style="font-size:18px;">Gaming</div>
+                                    <div class="text-muted" style="font-size:13px;">Mobile & PC Games</div>
+
                                 </div>
                             </div>
+
+                            <!-- Watching Anime -->
                             <div class="col-6 col-sm-6 col-md-6">
                                 <div class="p-3 border rounded-3 hobby-card text-center">
-                                    <div class="fw-semibold" style="font-size: 18px;">🎥 Editing</div>
-                                    <div class="text-muted" style="font-size:13px;">Video & visuals</div>
+
+                                    <div class="mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 3l10 18h-4l-10 -18l4 0" />
+                                            <path d="M5 3v18h4v-10.5" />
+                                            <path d="M19 21v-18h-4v10.5" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="fw-semibold" style="font-size:18px;">Anime</div>
+                                    <div class="text-muted" style="font-size:13px;">Watching Series</div>
+
                                 </div>
                             </div>
+
+                            <!-- Photography -->
                             <div class="col-6 col-sm-6 col-md-6">
                                 <div class="p-3 border rounded-3 hobby-card text-center">
-                                    <div class="fw-semibold" style="font-size: 18px;">📷 Photography</div>
-                                    <div class="text-muted" style="font-size:13px;">Capturing moments</div>
+
+                                    <div class="mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />
+                                            <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="fw-semibold" style="font-size:18px;">Photography</div>
+                                    <div class="text-muted" style="font-size:13px;">Capturing Moments</div>
+
                                 </div>
                             </div>
+
+                            <!-- Learning -->
                             <div class="col-6 col-sm-6 col-md-6">
                                 <div class="p-3 border rounded-3 hobby-card text-center">
-                                    <div class="fw-semibold" style="font-size: 18px;">📚 Learning</div>
-                                    <div class="text-muted" style="font-size:13px;">New tech & tools</div>
+
+                                    <div class="mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                            <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                            <path d="M3 6l0 13" />
+                                            <path d="M12 6l0 13" />
+                                            <path d="M21 6l0 13" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="fw-semibold" style="font-size:18px;">Learning</div>
+                                    <div class="text-muted" style="font-size:13px;">Continuous Growth</div>
+
                                 </div>
                             </div>
                         </div>
