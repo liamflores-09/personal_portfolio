@@ -144,7 +144,6 @@
         /* badges responsive wrap */
         .badge {
             font-weight: 400;
-            border-radius: 999px;
             font-size: 16px;
             padding: 10px 16px;
             letter-spacing: 0.3px;
@@ -548,7 +547,8 @@
                     IT \ Graphic Designer \ Looking for Opportunities
                 </div>
                 <div class="d-flex gap-2 mt-3 flex-wrap">
-                    <a href="{{ asset('FloresCV.pdf') }}" download class="btn btn-dark btn-lg" style="flex:1; min-width:140px;">
+                    <a href="{{ asset('FloresCV.pdf') }}" download class="btn btn-dark btn-lg"
+                        style="flex:1; min-width:140px;">
                         Download CV
                     </a>
                     <a href="https://www.linkedin.com/in/liam-flores-a843983a6/" target="_blank"
@@ -665,14 +665,157 @@
                 <div class="card mt-3">
                     <div class="card-body">
                         <h4 class="fw-bold mb-3">Tech Stack</h4>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-dark p-2">Laravel</span>
-                            <span class="badge bg-dark p-2">PHP</span>
-                            <span class="badge bg-dark p-2">JavaScript</span>
-                            <span class="badge bg-dark p-2">HTML</span>
-                            <span class="badge bg-dark p-2">CSS</span>
-                            <span class="badge bg-dark p-2">Bootstrap</span>
+
+                        <!-- Frontend -->
+                        <h6 class="fw-semibold">Frontend</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+
+                            <!-- HTML -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <!-- your HTML svg -->
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                    <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                                </svg>
+                                HTML
+                            </span>
+
+                            <!-- CSS -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 640 640" fill="currentColor">
+                                    <path
+                                        d="M128 96L162.9 491.8L320 544L477.1 491.8L512 96L128 96zM441.1 176L436.3 223.3L321 272.6L320.7 272.7L432.2 272.7L419.4 419.3L321.2 448L222.4 418.8L216 344.9L264.9 344.9L268.1 383.2L320.7 396.5L375.4 381.1L379.1 319.5L212.8 319L212.8 318.9L212.6 319L209 272.7L321.1 226L327.6 223.3L204.7 223.3L198.9 176L441.1 176z" />
+                                </svg>
+                                CSS
+                            </span>
+
+                            <!-- JavaScript -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                    <path d="M7.5 8h3v8l-2 -1" />
+                                    <path
+                                        d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                </svg>
+                                JavaScript
+                            </span>
+
+                            <!-- Bootstrap -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M2 12a2 2 0 0 0 2 -2v-4a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2" />
+                                    <path d="M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-4a2 2 0 0 1 2 -2" />
+                                    <path d="M9 16v-8h3.5a2 2 0 1 1 0 4h-3.5h4a2 2 0 1 1 0 4h-4" />
+                                </svg>
+                                Bootstrap
+                            </span>
                         </div>
+
+                        <!-- Backend -->
+                        <h6 class="fw-semibold">Backend</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <!-- PHP -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M2 12a10 9 0 1 0 20 0a10 9 0 1 0 -20 0" />
+                                    <path
+                                        d="M5.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653" />
+                                    <path
+                                        d="M15.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653" />
+                                    <path d="M12 7.5l-1 5.5" />
+                                    <path d="M11.6 10h2.4l-.5 3" />
+                                </svg>
+                                PHP
+                            </span>
+
+                            <!-- Laravel -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M3 17l8 5l7 -4v-8l-4 -2.5l4 -2.5l4 2.5v4l-11 6.5l-4 -2.5v-7.5l-4 -2.5l0 11.5" />
+                                    <path d="M11 18v4" />
+                                    <path d="M7 15.5l7 -4" />
+                                    <path d="M14 7.5v4" />
+                                    <path d="M14 11.5l4 2.5" />
+                                    <path d="M11 13v-7.5l-4 -2.5l-4 2.5" />
+                                    <path d="M7 8l4 -2.5" />
+                                    <path d="M18 10l4 -2.5" />
+                                </svg>
+                                Laravel
+                            </span>
+
+                            <!-- MySQL -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 8a2 2 0 0 1 2 2v4a2 2 0 1 1 -4 0v-4a2 2 0 0 1 2 -2" />
+                                    <path d="M17 8v8h4" />
+                                    <path d="M13 15l1 1" />
+                                    <path
+                                        d="M3 15a1 1 0 0 0 1 1h2a1 1 0 0 0 1 -1v-2a1 1 0 0 0 -1 -1h-2a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1" />
+                                </svg>
+                                MySQL
+                            </span>
+
+                            <!--  Node -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 640 640" fill="currentColor">
+                                    <path
+                                        d="M316.3 516C314.2 516 312.1 515.4 310.2 514.4L291 503C288.1 501.4 289.5 500.8 290.5 500.5C294.3 499.2 295.1 498.9 299.2 496.5C299.6 496.3 300.2 496.4 300.6 496.6L315.4 505.4C315.9 505.7 316.7 505.7 317.2 505.4L375 472C375.5 471.7 375.9 471.1 375.9 470.4L375.9 403.7C375.9 403 375.6 402.4 375 402.1L317.2 368.8C316.7 368.5 316 368.5 315.4 368.8L257.6 402.1C257 402.4 256.7 403.1 256.7 403.7L256.7 470.4C256.7 471 257.1 471.6 257.6 471.9L273.4 481C282 485.3 287.3 480.2 287.3 475.2L287.3 409.3C287.3 408.4 288 407.6 289 407.6L296.3 407.6C297.2 407.6 298 408.3 298 409.3L298 475.2C298 486.7 291.8 493.2 280.9 493.2C277.6 493.2 274.9 493.2 267.6 489.6L252.4 480.9C248.7 478.7 246.3 474.7 246.3 470.4L246.3 403.7C246.3 399.4 248.6 395.3 252.4 393.2L310.2 359.8C313.9 357.7 318.7 357.7 322.3 359.8L380.1 393.2C383.8 395.4 386.2 399.4 386.2 403.7L386.2 470.4C386.2 474.7 383.9 478.8 380.1 480.9L322.3 514.3C320.6 515.4 318.5 516 316.3 516z" />
+                                </svg>
+                                Node.js
+                            </span>
+                        </div>
+
+                        <!-- Tools -->
+                        <h6 class="fw-semibold">Tools</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <!-- Git -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M15 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                    <path d="M11 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                    <path d="M11 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                    <path d="M12 15v-6" />
+                                    <path d="M15 11l-2 -2" />
+                                    <path d="M11 7l-1.9 -1.9" />
+                                    <path
+                                        d="M13.446 2.6l7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1 -2.892 0l-7.955 -7.955a2.045 2.045 0 0 1 0 -2.892l7.955 -7.955a2.045 2.045 0 0 1 2.892 0" />
+                                </svg>
+                                Git
+                            </span>
+
+                            <!-- GitHub -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                                </svg>
+                                GitHub
+                            </span>
+
+                            <!-- VS Code -->
+                            <span class="badge bg-dark p-2 d-flex align-items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M16 3v18l4 -2.5v-13l-4 -2.5" />
+                                    <path
+                                        d="M9.165 13.903l-4.165 3.597l-2 -1l4.333 -4.5m1.735 -1.802l6.932 -7.198v5l-4.795 4.141" />
+                                    <path d="M16 16.5l-11 -10l-2 1l13 13.5" />
+                                </svg>
+                                VS Code
+                            </span>
+                        </div>
+
                     </div>
                 </div>
 
