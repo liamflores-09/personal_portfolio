@@ -1375,10 +1375,24 @@
                 <div class="d-flex gap-2 mt-3 flex-wrap">
                     <a href="{{ asset('FloresCV.pdf') }}" download class="btn btn-dark btn-lg"
                         style="flex:1; min-width:140px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-right: 8px;">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
                         Download CV
                     </a>
                     <a href="https://www.linkedin.com/in/liam-flores-a843983a6/" target="_blank"
                         class="btn btn-dark btn-lg" style="flex:1; min-width:140px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-right: 8px;">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
                         LinkedIn
                     </a>
                 </div>
@@ -1536,11 +1550,138 @@
                                             <div class="project-title">Capstone Project [Applicant Tracking System]
                                             </div>
                                             <div class="project-description">
-                                                Government registration and data processing system for streamlined
-                                                citizen services, document management, and secure data handling.
+                                                Applicant Tracking System, built using Laravel. Developed to streamline
+                                                the recruitment process for a local company, featuring job posting,
+                                                application management, and candidate tracking functionalities.
                                             </div>
                                             <div class="project-tech">
-                                                Laravel • PHP • MySQL • Bootstrap
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path
+                                                            d="M2 12a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2" />
+                                                        <path
+                                                            d="M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2" />
+                                                        <path d="M9 16v-8h3.5a2 2 0 1 1 0 4h-3.5h4a2 2 0 1 1 0 4h-4" />
+                                                    </svg>
+                                                    Laravel
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    PHP 8.2
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M12 2v4" />
+                                                        <path d="M12 18v4" />
+                                                        <path d="M4.93 4.93l2.83 2.83" />
+                                                        <path d="M16.24 16.24l2.83 2.83" />
+                                                        <path d="M2 12h4" />
+                                                        <path d="M18 12h4" />
+                                                        <path d="M4.93 19.07l2.83-2.83" />
+                                                        <path d="M16.24 7.76l2.83-2.83" />
+                                                        <circle cx="12" cy="12" r="3" />
+                                                    </svg>
+                                                    PostgreSQL
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    Bootstrap 5
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    JavaScript
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    HTML5
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    CSS3
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path
+                                                            d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.66 0 3-4 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4-3-9s1.34-9 3-9" />
+                                                        <path d="M12 3a9 9 0 0 0-9 9" />
+                                                    </svg>
+                                                    jQuery
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    Chart.js
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    AJAX
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path
+                                                            d="M2 12a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2" />
+                                                        <path
+                                                            d="M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2" />
+                                                        <path d="M9 16v-8h3.5a2 2 0 1 1 0 4h-3.5h4a2 2 0 1 1 0 4h-4" />
+                                                    </svg>
+                                                    Tabler.io
+                                                </span>
                                             </div>
                                             <a href="{{ route('project.capstone') }}" target="_blank"
                                                 class="project-btn">
@@ -1554,17 +1695,16 @@
                                 <div class="carousel-item">
                                     <div class="project-card-carousel">
                                         <div class="project-image">
-                                            <img src="https://placehold.co/600x400/2c3e50/white?text=UIUX+Design"
-                                                alt="UI/UX Design Works">
+                                            <img src="https://placehold.co/600x400/2c3e50/white?text=Yeyeniya's Pilot Service"
+                                                alt="Yeyeniya's Pilot Service">
                                         </div>
                                         <div class="project-content">
-                                            <div class="project-title">UI/UX Design Works</div>
+                                            <div class="project-title">Yeyeniya's Pilot Service</div>
                                             <div class="project-description">
-                                                Branding and publication materials including mobile app interfaces,
-                                                website wireframes, and complete visual identity systems.
+                                                Pilot Service for Yeyeniya, a Professional Player of Magic Chess: Go Go
                                             </div>
                                             <div class="project-tech">
-                                                Figma • Canva • Adobe XD • Illustrator
+                                                Ongoing
                                             </div>
                                             <a href="#" class="project-btn">View Project →</a>
                                         </div>
