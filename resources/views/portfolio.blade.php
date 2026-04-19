@@ -1542,7 +1542,10 @@
                                             <div class="project-tech">
                                                 Laravel • PHP • MySQL • Bootstrap
                                             </div>
-                                            <a href="#" class="project-btn">View Project →</a>
+                                            <a href="{{ route('project.capstone') }}" target="_blank"
+                                                class="project-btn">
+                                                View Project →
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1946,9 +1949,9 @@
             </div>
         </div>
 
-        <!-- GALLERY & TESTIMONIES SIDE BY SIDE - FIXED GALLERY -->
-        <div class="row mt-4 g-3">
-            <!-- LEFT COLUMN: GALLERY CARD (FIXED - Larger images, no footer text) -->
+        <!-- GALLERY & TESTIMONIES SIDE BY SIDE - FIXED LAYOUT -->
+        <div class="row g-4 mt-4">
+            <!-- LEFT COLUMN: GALLERY CARD -->
             <div class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
@@ -1958,13 +1961,13 @@
                         <ul class="nav nav-tabs gallery-tabs" id="galleryTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="art-tab" data-bs-toggle="tab" data-bs-target="#art"
-                                    type="button" role="tab" aria-controls="art" aria-selected="true">
+                                    type="button" role="tab">
                                     🎨 Art
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="ojt-tab" data-bs-toggle="tab" data-bs-target="#ojt"
-                                    type="button" role="tab" aria-controls="ojt" aria-selected="false">
+                                    type="button" role="tab">
                                     🖼️ OJT Graphics
                                 </button>
                             </li>
@@ -1978,61 +1981,109 @@
                                     <div class="marquee-track-gallery">
                                         <div class="marquee-slide">
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/FF6B6B/white?text=Character+Design"
-                                                    alt="Character Design">
-                                                <div class="gallery-overlay">
-                                                    <span>Character Design</span>
-                                                </div>
+                                                <img src="{{ asset('images/art/loonie.jpg') }}" alt="Loonie">
+                                                <div class="gallery-overlay"><span>Loonie</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/4ECDC4/white?text=Concept+Art"
-                                                    alt="Concept Art">
-                                                <div class="gallery-overlay">
-                                                    <span>Concept Art</span>
-                                                </div>
+                                                <img src="{{ asset('images/art/ivos1.jpg') }}" alt="Ivos1">
+                                                <div class="gallery-overlay"><span>Ivos1</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/FFE66D/white?text=Digital+Art"
-                                                    alt="Digital Art">
-                                                <div class="gallery-overlay">
-                                                    <span>Digital Art</span>
-                                                </div>
+                                                <img src="{{ asset('images/art/ivos2.jpg') }}" alt="Ivos2">
+                                                <div class="gallery-overlay"><span>Ivos2</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/FF6B6B/white?text=Vector+Art"
-                                                    alt="Vector Art">
-                                                <div class="gallery-overlay">
-                                                    <span>Vector Art</span>
-                                                </div>
+                                                <img src="{{ asset('images/art/ivos3.jpg') }}" alt="Ivos3">
+                                                <div class="gallery-overlay"><span>Ivos3</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/4ECDC4/white?text=Illustration"
-                                                    alt="Illustration">
-                                                <div class="gallery-overlay">
-                                                    <span>Illustration</span>
-                                                </div>
+                                                <img src="{{ asset('images/art/21savage.jpg') }}" alt="21 Savage">
+                                                <div class="gallery-overlay"><span>21 Savage</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/FFE66D/white?text=Sketch"
-                                                    alt="Sketch">
-                                                <div class="gallery-overlay">
-                                                    <span>Sketch</span>
-                                                </div>
+                                                <img src="{{ asset('images/art/chrisbrown.jpg') }}" alt="Chris Brown">
+                                                <div class="gallery-overlay"><span>Chris Brown</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/drake.jpg') }}" alt="Drake">
+                                                <div class="gallery-overlay"><span>Drake</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/eminem.jpg') }}" alt="Eminem">
+                                                <div class="gallery-overlay"><span>Eminem</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/icecube.jpg') }}" alt="Ice Cube">
+                                                <div class="gallery-overlay"><span>Ice Cube</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/juice.jpg') }}" alt="Juice WRLD">
+                                                <div class="gallery-overlay"><span>Juice WRLD</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/lilpump.jpg') }}" alt="Lil Pump">
+                                                <div class="gallery-overlay"><span>Lil Pump</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/luhkel.jpg') }}" alt="Luh Kel">
+                                                <div class="gallery-overlay"><span>Luh Kel</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/xxx.jpg') }}" alt="XXXTentacion">
+                                                <div class="gallery-overlay"><span>XXXTentacion</span></div>
                                             </div>
                                             <!-- Duplicate for seamless loop -->
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/FF6B6B/white?text=Character+Design"
-                                                    alt="Character Design">
-                                                <div class="gallery-overlay">
-                                                    <span>Character Design</span>
-                                                </div>
+                                                <img src="{{ asset('images/art/loonie.jpg') }}" alt="Loonie">
+                                                <div class="gallery-overlay"><span>Loonie</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/4ECDC4/white?text=Concept+Art"
-                                                    alt="Concept Art">
-                                                <div class="gallery-overlay">
-                                                    <span>Concept Art</span>
-                                                </div>
+                                                <img src="{{ asset('images/art/ivos1.jpg') }}" alt="Ivos1">
+                                                <div class="gallery-overlay"><span>Ivos1</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/ivos2.jpg') }}" alt="Ivos2">
+                                                <div class="gallery-overlay"><span>Ivos2</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/ivos3.jpg') }}" alt="Ivos3">
+                                                <div class="gallery-overlay"><span>Ivos3</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/21savage.jpg') }}" alt="21 Savage">
+                                                <div class="gallery-overlay"><span>21 Savage</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/chrisbrown.jpg') }}" alt="Chris Brown">
+                                                <div class="gallery-overlay"><span>Chris Brown</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/drake.jpg') }}" alt="Drake">
+                                                <div class="gallery-overlay"><span>Drake</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/eminem.jpg') }}" alt="Eminem">
+                                                <div class="gallery-overlay"><span>Eminem</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/icecube.jpg') }}" alt="Ice Cube">
+                                                <div class="gallery-overlay"><span>Ice Cube</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/juice.jpg') }}" alt="Juice WRLD">
+                                                <div class="gallery-overlay"><span>Juice WRLD</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/lilpump.jpg') }}" alt="Lil Pump">
+                                                <div class="gallery-overlay"><span>Lil Pump</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/luhkel.jpg') }}" alt="Luh Kel">
+                                                <div class="gallery-overlay"><span>Luh Kel</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/art/xxx.jpg') }}" alt="XXXTentacion">
+                                                <div class="gallery-overlay"><span>XXXTentacion</span></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2045,69 +2096,75 @@
                                     <div class="marquee-track-gallery reverse">
                                         <div class="marquee-slide">
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/2C3E50/white?text=Government+Poster"
-                                                    alt="Government Poster">
-                                                <div class="gallery-overlay">
-                                                    <span>Government Poster</span>
-                                                </div>
+                                                <img src="{{ asset('images/ojt/1.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/34495E/white?text=Event+Banner"
-                                                    alt="Event Banner">
-                                                <div class="gallery-overlay">
-                                                    <span>Event Banner</span>
-                                                </div>
+                                                <img src="{{ asset('images/ojt/2.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/2C3E50/white?text=Infographic"
-                                                    alt="Infographic">
-                                                <div class="gallery-overlay">
-                                                    <span>Infographic</span>
-                                                </div>
+                                                <img src="{{ asset('images/ojt/3.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/34495E/white?text=Social+Media"
-                                                    alt="Social Media">
-                                                <div class="gallery-overlay">
-                                                    <span>Social Media Graphic</span>
-                                                </div>
+                                                <img src="{{ asset('images/ojt/4.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/2C3E50/white?text=Brochure"
-                                                    alt="Brochure">
-                                                <div class="gallery-overlay">
-                                                    <span>Brochure</span>
-                                                </div>
+                                                <img src="{{ asset('images/ojt/5.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/34495E/white?text=Logo"
-                                                    alt="Logo">
-                                                <div class="gallery-overlay">
-                                                    <span>Logo Design</span>
-                                                </div>
+                                                <img src="{{ asset('images/ojt/6.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/ojt/7.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/ojt/8.png') }}" alt="Live Stream Banner">
+                                                <div class="gallery-overlay"><span>Live Stream Banner</span></div>
                                             </div>
                                             <!-- Duplicate for seamless loop -->
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/2C3E50/white?text=Government+Poster"
-                                                    alt="Government Poster">
-                                                <div class="gallery-overlay">
-                                                    <span>Government Poster</span>
-                                                </div>
+                                                <img src="{{ asset('images/ojt/1.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
                                             </div>
                                             <div class="gallery-item">
-                                                <img src="https://placehold.co/600x400/34495E/white?text=Event+Banner"
-                                                    alt="Event Banner">
-                                                <div class="gallery-overlay">
-                                                    <span>Event Banner</span>
-                                                </div>
+                                                <img src="{{ asset('images/ojt/2.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/ojt/3.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/ojt/4.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/ojt/5.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/ojt/6.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/ojt/7.png') }}" alt="Unleash Stickers">
+                                                <div class="gallery-overlay"><span>Unleash Stickers</span></div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{ asset('images/ojt/8.png') }}" alt="Live Stream Banner">
+                                                <div class="gallery-overlay"><span>Live Stream Banner</span></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- FOOTER TEXT REMOVED - No more "Hover to pause" text -->
                     </div>
                 </div>
             </div>
@@ -2118,113 +2175,124 @@
                     <div class="card-body">
                         <h4 class="fw-bold mb-3 text-center">What People Say</h4>
 
-                        <!-- Testimonies Marquee -->
                         <div class="testimonies-marquee">
                             <div class="testimonies-track">
-                                <!-- Testimonial 1 -->
                                 <div class="testimonial-item">
                                     <div class="testimonial-content">
                                         <div class="quote-icon">"</div>
-                                        <p class="testimonial-text">
-                                            Liam is an exceptional developer! He delivered our project ahead of schedule
-                                            and exceeded all expectations.
-                                        </p>
-                                        <div class="testimonial-author">
-                                            <strong>— John Reyes</strong>
-                                            <span>Project Manager, Tech Solutions Inc.</span>
-                                        </div>
-                                        <div class="testimonial-stars">
-                                            ★★★★★
-                                        </div>
+                                        <p class="testimonial-text">Liam is an exceptional developer and a good team
+                                            leader.</p>
+                                        <div class="testimonial-author"><strong>— Jen Aranas</strong><span>Capstone
+                                                Adviser, TIP Manila</span></div>
+
                                     </div>
                                 </div>
-
-                                <!-- Testimonial 2 -->
                                 <div class="testimonial-item">
                                     <div class="testimonial-content">
                                         <div class="quote-icon">"</div>
+
                                         <p class="testimonial-text">
                                             Working with Liam was a pleasure. His attention to detail and creative
                                             problem-solving skills are top-notch.
                                         </p>
+
                                         <div class="testimonial-author">
-                                            <strong>— Sarah Mendoza</strong>
-                                            <span>UI/UX Designer, CreativeHub</span>
-                                        </div>
-                                        <div class="testimonial-stars">
-                                            ★★★★★
+                                            <strong class="d-flex align-items-center gap-1">
+                                                — Vmiguel Gonzales
+
+                                                <!-- Verified Badge -->
+                                                <svg width="16" height="16" viewBox="0 0 24 24">
+                                                    <circle cx="12" cy="12" r="10" fill="#1877F2" />
+                                                    <path d="M9.5 12.5l1.8 1.8 3.7-3.7" fill="none" stroke="#fff"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </strong>
+
+                                            <span> Internet Personality</span>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Testimonial 3 -->
                                 <div class="testimonial-item">
                                     <div class="testimonial-content">
                                         <div class="quote-icon">"</div>
                                         <p class="testimonial-text">
-                                            Liam's technical expertise and dedication helped us streamline our
-                                            government systems. Highly recommended!
+                                            Helped improve our system a lot. Smooth and reliable work.
                                         </p>
                                         <div class="testimonial-author">
-                                            <strong>— Atty. David Cruz</strong>
-                                            <span>DILG Regional Director</span>
-                                        </div>
-                                        <div class="testimonial-stars">
-                                            ★★★★★
+                                            <strong>— Client</strong>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Testimonial 4 -->
                                 <div class="testimonial-item">
                                     <div class="testimonial-content">
                                         <div class="quote-icon">"</div>
                                         <p class="testimonial-text">
-                                            One of the most talented IT graduates I've mentored. Liam has a bright
-                                            future in web development.
+                                            Skilled and consistent. Shows strong potential in development.
                                         </p>
                                         <div class="testimonial-author">
-                                            <strong>— Prof. Maria Santos</strong>
-                                            <span>IT Department, TIP Manila</span>
-                                        </div>
-                                        <div class="testimonial-stars">
-                                            ★★★★★
+                                            <strong>— Mentor</strong>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Testimonial 5 -->
                                 <div class="testimonial-item">
                                     <div class="testimonial-content">
                                         <div class="quote-icon">"</div>
                                         <p class="testimonial-text">
-                                            Liam's design skills are incredible. He created stunning graphics that
-                                            elevated our brand identity.
+                                            Great design sense. The output looked clean and professional.
                                         </p>
                                         <div class="testimonial-author">
-                                            <strong>— Mike Lim</strong>
-                                            <span>Marketing Director, BrandBoost</span>
-                                        </div>
-                                        <div class="testimonial-stars">
-                                            ★★★★★
+                                            <strong>— Project Partner</strong>
                                         </div>
                                     </div>
                                 </div>
-
                                 <!-- Duplicate for seamless loop -->
                                 <div class="testimonial-item">
                                     <div class="testimonial-content">
                                         <div class="quote-icon">"</div>
+                                        <p class="testimonial-text">Liam is an exceptional developer and a good team
+                                            leader.</p>
+                                        <div class="testimonial-author"><strong>— Jen Aranas</strong><span>Capstone
+                                                Adviser, TIP Manila</span></div>
+
+                                    </div>
+                                </div>
+                                <div class="testimonial-item">
+                                    <div class="testimonial-content">
+                                        <div class="quote-icon">"</div>
+
                                         <p class="testimonial-text">
-                                            Liam is an exceptional developer! He delivered our project ahead of schedule
-                                            and exceeded all expectations.
+                                            Working with Liam was a pleasure. His attention to detail and creative
+                                            problem-solving skills are top-notch.
+                                        </p>
+
+                                        <div class="testimonial-author">
+                                            <strong class="d-flex align-items-center gap-1">
+                                                — Vmiguel Gonzales
+
+                                                <!-- Verified Badge -->
+                                                <svg width="16" height="16" viewBox="0 0 24 24">
+                                                    <circle cx="12" cy="12" r="10" fill="#1877F2" />
+                                                    <path d="M9.5 12.5l1.8 1.8 3.7-3.7" fill="none" stroke="#fff"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </strong>
+
+                                            <span> Internet Personality</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-item">
+                                    <div class="testimonial-content">
+                                        <div class="quote-icon">"</div>
+                                        <p class="testimonial-text">
+                                            Helped improve my business a lot, great designing skills and smooth work.
                                         </p>
                                         <div class="testimonial-author">
-                                            <strong>— John Reyes</strong>
-                                            <span>Project Manager, Tech Solutions Inc.</span>
-                                        </div>
-                                        <div class="testimonial-stars">
-                                            ★★★★★
+                                            <strong>— Client</strong>
                                         </div>
                                     </div>
                                 </div>
@@ -2233,30 +2301,40 @@
                                     <div class="testimonial-content">
                                         <div class="quote-icon">"</div>
                                         <p class="testimonial-text">
-                                            Working with Liam was a pleasure. His attention to detail and creative
-                                            problem-solving skills are top-notch.
+                                            Skilled and consistent. Shows strong potential in development.
                                         </p>
                                         <div class="testimonial-author">
-                                            <strong>— Sarah Mendoza</strong>
-                                            <span>UI/UX Designer, CreativeHub</span>
+                                            <strong>— Mentor</strong>
                                         </div>
-                                        <div class="testimonial-stars">
-                                            ★★★★★
+                                    </div>
+                                </div>
+
+                                <div class="testimonial-item">
+                                    <div class="testimonial-content">
+                                        <div class="quote-icon">"</div>
+                                        <p class="testimonial-text">
+                                            Great design sense. The output looked clean and professional.
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <strong>— Project Partner</strong>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                        <!-- 
                         <div class="testimonies-footer">
                             <span>⭐ 5.0 Average Rating</span>
                             <span>•</span>
                             <span>💬 15+ Happy Clients</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
+
+
+
 
         <!-- CONTACT CARD -->
         <div class="card mt-3 mb-5 contact-card">
