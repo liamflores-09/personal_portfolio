@@ -8,7 +8,7 @@
 
     <!-- Bootstrap 5 (responsive core) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Nunito Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -300,53 +300,244 @@
             }
         }
 
-        /* Contact pills wrapper responsive */
-        .contact-pill {
+        .contact-card {
+            border-radius: 24px !important;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .contact-subtitle {
+            color: #6c757d;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .contact-info-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 16px;
+            background: #f8f9fa;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 14px;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.25s ease;
-            border: 1px solid #ddd;
-            color: #111;
             background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            color: #111;
         }
 
+        .contact-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .contact-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-value {
+            font-size: 15px;
+            font-weight: 500;
+            color: #1e293b;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-value:hover {
+            color: #0a66c2;
+        }
+
+        .social-links-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .social-btn {
+            flex: 1;
+            min-width: calc(50% - 12px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+            background: #fff;
+            color: #333;
+        }
+
+        .social-btn svg {
+            transition: transform 0.2s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-btn:hover svg {
+            transform: scale(1.1);
+        }
+
+        /* Individual button hover colors */
+        .linkedin-btn:hover {
+            background: #0a66c2;
+            border-color: #0a66c2;
+            color: white;
+        }
+
+        .facebook-btn:hover {
+            background: #1877f2;
+            border-color: #1877f2;
+            color: white;
+        }
+
+        .tiktok-btn:hover {
+            background: #000000;
+            border-color: #000000;
+            color: white;
+        }
+
+        .email-btn:hover {
+            background: #ea4335;
+            border-color: #ea4335;
+            color: white;
+        }
+
+        .contact-footer {
+            text-align: center;
+            padding-top: 16px;
+            border-top: 1px solid #e9ecef;
+            font-size: 13px;
+            color: #6c757d;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode .contact-card {
+            background: #1e1e1e;
+        }
+
+        body.dark-mode .contact-subtitle {
+            color: #aaa;
+        }
+
+        body.dark-mode .contact-info-item {
+            background: #2a2a2a;
+        }
+
+        body.dark-mode .contact-info-item:hover {
+            background: #353535;
+        }
+
+        body.dark-mode .contact-icon {
+            background: #1e1e1e;
+            color: #ddd;
+        }
+
+        body.dark-mode .contact-label {
+            color: #999;
+        }
+
+        body.dark-mode .contact-value {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .contact-value:hover {
+            color: #0a66c2;
+        }
+
+        body.dark-mode .social-btn {
+            background: #2a2a2a;
+            border-color: #3a3a3a;
+            color: #ddd;
+        }
+
+        body.dark-mode .social-btn:hover {
+            border-color: transparent;
+        }
+
+        body.dark-mode .contact-footer {
+            border-top-color: #333;
+            color: #999;
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 576px) {
-            .contact-pill {
-                width: 100%;
+            .contact-info-item {
+                padding: 10px 14px;
+            }
+
+            .contact-icon {
+                width: 38px;
+                height: 38px;
+            }
+
+            .contact-value {
+                font-size: 13px;
+            }
+
+            .social-btn {
+                padding: 10px 12px;
+                font-size: 13px;
+                min-width: calc(50% - 8px);
+            }
+
+            .social-btn svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            .contact-footer {
+                font-size: 11px;
             }
         }
 
-        .contact-pill:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-        }
-
-        /* social hover colors */
-        .linkedin:hover {
-            background: #0a66c2;
-            color: #fff;
-        }
-
-        .facebook:hover {
-            background: #1877f2;
-            color: #fff;
-        }
-
-        .tiktok:hover {
-            background: #000;
-            color: #fff;
-        }
-
-        .email:hover {
-            background: #333;
-            color: #fff;
+        @media (min-width: 577px) and (max-width: 768px) {
+            .social-btn {
+                min-width: calc(50% - 8px);
+            }
         }
 
         /* DARK MODE STYLES */
@@ -513,6 +704,641 @@
                 min-height: 100px;
             }
         }
+
+        /* Project Card Carousel Styles - Image on top, button below */
+        .project-card-carousel {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            margin: 10px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card-carousel .project-image {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .project-card-carousel .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card-carousel:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-card-carousel .project-content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card-carousel .project-title {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .project-card-carousel .project-description {
+            font-size: 15px;
+            color: #5a6a7e;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .project-card-carousel .project-tech {
+            font-size: 13px;
+            color: #8895a7;
+            margin-bottom: 20px;
+            letter-spacing: 0.3px;
+            font-weight: 500;
+        }
+
+        .project-card-carousel .project-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
+            width: fit-content;
+            margin-top: auto;
+        }
+
+        .project-card-carousel .project-btn:hover {
+            background: #333;
+            transform: translateX(6px);
+            color: white;
+        }
+
+        /* Carousel Control Styling - FIXED for better visibility */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 44px;
+            height: 44px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev {
+            left: -15px;
+        }
+
+        .carousel-control-next {
+            right: -15px;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.85);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .carousel-indicators {
+            bottom: -35px;
+        }
+
+        .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 6px;
+            background-color: #bbb;
+        }
+
+        .carousel-indicators button.active {
+            background-color: #111;
+        }
+
+        /* Dark mode support */
+        body.dark-mode .project-card-carousel {
+            background: #1e1e1e;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .project-card-carousel .project-title {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .project-card-carousel .project-description {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .project-card-carousel .project-tech {
+            color: #8a8a8a;
+        }
+
+        body.dark-mode .project-card-carousel .project-btn {
+            background: #2c2c2c;
+            color: #eee;
+        }
+
+        body.dark-mode .project-card-carousel .project-btn:hover {
+            background: #444;
+        }
+
+        body.dark-mode .carousel-indicators button {
+            background-color: #555;
+        }
+
+        body.dark-mode .carousel-indicators button.active {
+            background-color: #fff;
+        }
+
+        body.dark-mode .carousel-control-prev,
+        body.dark-mode .carousel-control-next {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body.dark-mode .carousel-control-prev:hover,
+        body.dark-mode .carousel-control-next:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .project-card-carousel {
+                margin: 10px 20px;
+            }
+
+            .project-card-carousel .project-image {
+                height: 180px;
+            }
+
+            .project-card-carousel .project-content {
+                padding: 18px;
+            }
+
+            .project-card-carousel .project-title {
+                font-size: 18px;
+            }
+
+            .project-card-carousel .project-description {
+                font-size: 13px;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 36px;
+                height: 36px;
+            }
+
+            .carousel-control-prev {
+                left: -8px;
+            }
+
+            .carousel-control-next {
+                right: -8px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .project-card-carousel {
+                margin: 10px 10px;
+            }
+
+            .project-card-carousel .project-image {
+                height: 150px;
+            }
+
+            .project-card-carousel .project-content {
+                padding: 14px;
+            }
+
+            .project-card-carousel .project-title {
+                font-size: 16px;
+            }
+
+            .project-card-carousel .project-description {
+                font-size: 12px;
+            }
+
+            .project-card-carousel .project-tech {
+                font-size: 11px;
+            }
+
+            .project-card-carousel .project-btn {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 30px;
+                height: 30px;
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .project-tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 16px 0 12px 0;
+        }
+
+        .tech-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f0f2f5;
+            padding: 6px 12px;
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1a1e24;
+            transition: all 0.2s ease;
+            letter-spacing: 0.2px;
+        }
+
+        .badge-icon {
+            width: 14px;
+            height: 14px;
+            stroke-width: 2;
+        }
+
+        /* Dark mode support */
+        body.dark-mode .tech-badge {
+            background: #2a2d35;
+            color: #e4e6eb;
+        }
+
+        /* Hover effect */
+        .tech-badge:hover {
+            transform: translateY(-2px);
+            background: #e4e6ea;
+        }
+
+        body.dark-mode .tech-badge:hover {
+            background: #3a3f4a;
+        }
+
+        /* Responsive */
+        @media (max-width: 576px) {
+            .tech-badge {
+                font-size: 11px;
+                padding: 4px 10px;
+            }
+
+            .badge-icon {
+                width: 12px;
+                height: 12px;
+            }
+
+            .project-tech-badges {
+                gap: 8px;
+            }
+        }
+
+        /* GALLERY STYLES - FIXED WITH LARGER IMAGES */
+        .gallery-tabs {
+            border-bottom: 2px solid #e9ecef;
+            margin-bottom: 20px;
+            gap: 8px;
+        }
+
+        .gallery-tabs .nav-link {
+            border: none;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 10px 24px;
+            color: #6c757d;
+            background: transparent;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-tabs .nav-link:hover {
+            color: #111;
+            background: #f8f9fa;
+        }
+
+        .gallery-tabs .nav-link.active {
+            color: #fff;
+            background: #111;
+            border: none;
+        }
+
+        body.dark-mode .gallery-tabs {
+            border-bottom-color: #333;
+        }
+
+        body.dark-mode .gallery-tabs .nav-link {
+            color: #aaa;
+        }
+
+        body.dark-mode .gallery-tabs .nav-link:hover {
+            color: #fff;
+            background: #2a2a2a;
+        }
+
+        body.dark-mode .gallery-tabs .nav-link.active {
+            background: #fff;
+            color: #111;
+        }
+
+        .marquee-gallery {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            border-radius: 16px;
+        }
+
+        .marquee-track-gallery {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .marquee-slide {
+            display: flex;
+            animation: marqueeScroll 25s linear infinite;
+            gap: 16px;
+        }
+
+        .marquee-gallery.reverse .marquee-slide {
+            animation: marqueeScrollReverse 25s linear infinite;
+        }
+
+        .marquee-gallery:hover .marquee-slide {
+            animation-play-state: paused;
+        }
+
+        @keyframes marqueeScroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes marqueeScrollReverse {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* LARGER GALLERY IMAGES */
+        .gallery-item {
+            position: relative;
+            width: 280px;
+            height: 200px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+            padding: 12px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay span {
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            display: block;
+            text-align: center;
+        }
+
+        /* TESTIMONIES STYLES */
+        .testimonies-marquee {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 10px 0;
+        }
+
+        .testimonies-track {
+            display: flex;
+            gap: 20px;
+            animation: scrollTestimonies 35s linear infinite;
+            width: fit-content;
+        }
+
+        .testimonies-marquee:hover .testimonies-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollTestimonies {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .testimonial-item {
+            width: 280px;
+            flex-shrink: 0;
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+            background: #fff;
+        }
+
+        .quote-icon {
+            font-size: 42px;
+            font-family: Georgia, serif;
+            color: #ddd;
+            line-height: 1;
+            margin-bottom: -15px;
+            font-weight: bold;
+        }
+
+        .testimonial-text {
+            font-size: 13px;
+            line-height: 1.55;
+            color: #4a5568;
+            margin: 10px 0 12px 0;
+            font-style: italic;
+        }
+
+        .testimonial-author strong {
+            display: block;
+            font-size: 13px;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-author span {
+            font-size: 11px;
+            color: #718096;
+        }
+
+        .testimonial-stars {
+            margin-top: 10px;
+            color: #fbbf24;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .testimonies-footer {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid #e9ecef;
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        body.dark-mode .testimonial-item {
+            background: #2a2a2a;
+        }
+
+        body.dark-mode .testimonial-item:hover {
+            background: #353535;
+        }
+
+        body.dark-mode .quote-icon {
+            color: #444;
+        }
+
+        body.dark-mode .testimonial-text {
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .testimonial-author strong {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .testimonial-author span {
+            color: #9ca3af;
+        }
+
+        body.dark-mode .testimonies-footer {
+            border-top-color: #333;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .gallery-item {
+                width: 220px;
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: 200px;
+                height: 150px;
+            }
+
+            .testimonial-item {
+                width: 260px;
+                padding: 14px;
+            }
+
+            .gallery-tabs .nav-link {
+                font-size: 13px;
+                padding: 8px 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-item {
+                width: 170px;
+                height: 130px;
+            }
+
+            .gallery-tabs .nav-link {
+                font-size: 12px;
+                padding: 6px 14px;
+            }
+
+            .testimonial-item {
+                width: 240px;
+            }
+
+            .testimonies-footer {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+
+            .testimonies-footer span:nth-child(2) {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -584,24 +1410,176 @@
                     </div>
                 </div>
 
-                <!-- PROJECTS CARD -->
+                <!-- PROJECTS CARD - 3 Cards with Carousel -->
                 <div class="card mt-4">
                     <div class="card-body">
                         <h4 class="fw-bold mb-3">Projects</h4>
-                        <div class="d-flex flex-column gap-3">
-                            <div class="p-3 border rounded-3">
-                                <div style="font-size:18px; font-weight:600;">Portfolio Website</div>
-                                <div style="font-size:15px; color:#555;">Personal portfolio built using Laravel +
-                                    Bootstrap.</div>
-                                <div style="font-size:13px; color:#888; margin-top:6px;">Laravel • Bootstrap • MySQL
+
+                        <!-- Carousel -->
+                        <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel"
+                            data-bs-interval="5000">
+                            <!-- Carousel Indicators -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+
+                            <!-- Carousel Inner - 3 Slides -->
+                            <div class="carousel-inner">
+                                <!-- Project 1 -->
+                                <div class="carousel-item active">
+                                    <div class="project-card-carousel">
+                                        <div class="project-image">
+                                            <img src="{{ asset('images/portfoliobg.png') }}"
+                                                alt="Portfolio Website Project">
+                                        </div>
+                                        <div class="project-content">
+                                            <div class="project-title">Portfolio Website</div>
+                                            <div class="project-description">
+                                                Personal portfolio built using Laravel + Bootstrap. Fully responsive
+                                                with dark mode, interactive elements, and smooth animations.
+                                            </div>
+                                            <div class="project-tech-badges">
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path
+                                                            d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                                                    </svg>
+                                                    Laravel
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    Bootstrap
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path
+                                                            d="M2 12a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2" />
+                                                        <path
+                                                            d="M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2" />
+                                                        <path d="M9 16v-8h3.5a2 2 0 1 1 0 4h-3.5h4a2 2 0 1 1 0 4h-4" />
+                                                    </svg>
+                                                    MySQL
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    JavaScript
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    HTML
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    CSS
+                                                </span>
+                                            </div>
+                                            <a href="https://liamflores.onrender.com" class="project-btn"
+                                                target="_blank">
+                                                View Project →
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project 2 -->
+                                <div class="carousel-item">
+                                    <div class="project-card-carousel">
+                                        <div class="project-image">
+                                            <img src="{{ asset('images/capstonebg.png') }}"
+                                                alt="Applicant Tracking System Project">
+                                        </div>
+                                        <div class="project-content">
+                                            <div class="project-title">Capstone Project [Applicant Tracking System]
+                                            </div>
+                                            <div class="project-description">
+                                                Government registration and data processing system for streamlined
+                                                citizen services, document management, and secure data handling.
+                                            </div>
+                                            <div class="project-tech">
+                                                Laravel • PHP • MySQL • Bootstrap
+                                            </div>
+                                            <a href="#" class="project-btn">View Project →</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project 3 -->
+                                <div class="carousel-item">
+                                    <div class="project-card-carousel">
+                                        <div class="project-image">
+                                            <img src="https://placehold.co/600x400/2c3e50/white?text=UIUX+Design"
+                                                alt="UI/UX Design Works">
+                                        </div>
+                                        <div class="project-content">
+                                            <div class="project-title">UI/UX Design Works</div>
+                                            <div class="project-description">
+                                                Branding and publication materials including mobile app interfaces,
+                                                website wireframes, and complete visual identity systems.
+                                            </div>
+                                            <div class="project-tech">
+                                                Figma • Canva • Adobe XD • Illustrator
+                                            </div>
+                                            <a href="#" class="project-btn">View Project →</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="p-3 border rounded-3">
-                                <div style="font-size:18px; font-weight:600;">DILG Pre-Registration System</div>
-                                <div style="font-size:15px; color:#555;">Government registration and data processing
-                                    system.</div>
-                                <div style="font-size:13px; color:#888; margin-top:6px;">Laravel • PHP • MySQL</div>
-                            </div>
+
+                            <!-- Carousel Controls - Previous/Next Buttons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -968,32 +1946,398 @@
             </div>
         </div>
 
-        <!-- CONTACT SECTION: fully responsive contact pills -->
-        <div class="card mt-3 mb-5">
+        <!-- GALLERY & TESTIMONIES SIDE BY SIDE - FIXED GALLERY -->
+        <div class="row mt-4 g-3">
+            <!-- LEFT COLUMN: GALLERY CARD (FIXED - Larger images, no footer text) -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="fw-bold mb-3">Creative Gallery</h4>
+
+                        <!-- Tabs Navigation -->
+                        <ul class="nav nav-tabs gallery-tabs" id="galleryTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="art-tab" data-bs-toggle="tab" data-bs-target="#art"
+                                    type="button" role="tab" aria-controls="art" aria-selected="true">
+                                    🎨 Art
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="ojt-tab" data-bs-toggle="tab" data-bs-target="#ojt"
+                                    type="button" role="tab" aria-controls="ojt" aria-selected="false">
+                                    🖼️ OJT Graphics
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Tabs Content -->
+                        <div class="tab-content" id="galleryTabContent">
+                            <!-- Art Tab -->
+                            <div class="tab-pane fade show active" id="art" role="tabpanel" aria-labelledby="art-tab">
+                                <div class="marquee-gallery">
+                                    <div class="marquee-track-gallery">
+                                        <div class="marquee-slide">
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/FF6B6B/white?text=Character+Design"
+                                                    alt="Character Design">
+                                                <div class="gallery-overlay">
+                                                    <span>Character Design</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/4ECDC4/white?text=Concept+Art"
+                                                    alt="Concept Art">
+                                                <div class="gallery-overlay">
+                                                    <span>Concept Art</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/FFE66D/white?text=Digital+Art"
+                                                    alt="Digital Art">
+                                                <div class="gallery-overlay">
+                                                    <span>Digital Art</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/FF6B6B/white?text=Vector+Art"
+                                                    alt="Vector Art">
+                                                <div class="gallery-overlay">
+                                                    <span>Vector Art</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/4ECDC4/white?text=Illustration"
+                                                    alt="Illustration">
+                                                <div class="gallery-overlay">
+                                                    <span>Illustration</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/FFE66D/white?text=Sketch"
+                                                    alt="Sketch">
+                                                <div class="gallery-overlay">
+                                                    <span>Sketch</span>
+                                                </div>
+                                            </div>
+                                            <!-- Duplicate for seamless loop -->
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/FF6B6B/white?text=Character+Design"
+                                                    alt="Character Design">
+                                                <div class="gallery-overlay">
+                                                    <span>Character Design</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/4ECDC4/white?text=Concept+Art"
+                                                    alt="Concept Art">
+                                                <div class="gallery-overlay">
+                                                    <span>Concept Art</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- OJT Graphics Tab -->
+                            <div class="tab-pane fade" id="ojt" role="tabpanel" aria-labelledby="ojt-tab">
+                                <div class="marquee-gallery reverse">
+                                    <div class="marquee-track-gallery reverse">
+                                        <div class="marquee-slide">
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/2C3E50/white?text=Government+Poster"
+                                                    alt="Government Poster">
+                                                <div class="gallery-overlay">
+                                                    <span>Government Poster</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/34495E/white?text=Event+Banner"
+                                                    alt="Event Banner">
+                                                <div class="gallery-overlay">
+                                                    <span>Event Banner</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/2C3E50/white?text=Infographic"
+                                                    alt="Infographic">
+                                                <div class="gallery-overlay">
+                                                    <span>Infographic</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/34495E/white?text=Social+Media"
+                                                    alt="Social Media">
+                                                <div class="gallery-overlay">
+                                                    <span>Social Media Graphic</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/2C3E50/white?text=Brochure"
+                                                    alt="Brochure">
+                                                <div class="gallery-overlay">
+                                                    <span>Brochure</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/34495E/white?text=Logo"
+                                                    alt="Logo">
+                                                <div class="gallery-overlay">
+                                                    <span>Logo Design</span>
+                                                </div>
+                                            </div>
+                                            <!-- Duplicate for seamless loop -->
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/2C3E50/white?text=Government+Poster"
+                                                    alt="Government Poster">
+                                                <div class="gallery-overlay">
+                                                    <span>Government Poster</span>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="https://placehold.co/600x400/34495E/white?text=Event+Banner"
+                                                    alt="Event Banner">
+                                                <div class="gallery-overlay">
+                                                    <span>Event Banner</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FOOTER TEXT REMOVED - No more "Hover to pause" text -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: TESTIMONIES CARD -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="fw-bold mb-3 text-center">What People Say</h4>
+
+                        <!-- Testimonies Marquee -->
+                        <div class="testimonies-marquee">
+                            <div class="testimonies-track">
+                                <!-- Testimonial 1 -->
+                                <div class="testimonial-item">
+                                    <div class="testimonial-content">
+                                        <div class="quote-icon">"</div>
+                                        <p class="testimonial-text">
+                                            Liam is an exceptional developer! He delivered our project ahead of schedule
+                                            and exceeded all expectations.
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <strong>— John Reyes</strong>
+                                            <span>Project Manager, Tech Solutions Inc.</span>
+                                        </div>
+                                        <div class="testimonial-stars">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 2 -->
+                                <div class="testimonial-item">
+                                    <div class="testimonial-content">
+                                        <div class="quote-icon">"</div>
+                                        <p class="testimonial-text">
+                                            Working with Liam was a pleasure. His attention to detail and creative
+                                            problem-solving skills are top-notch.
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <strong>— Sarah Mendoza</strong>
+                                            <span>UI/UX Designer, CreativeHub</span>
+                                        </div>
+                                        <div class="testimonial-stars">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 3 -->
+                                <div class="testimonial-item">
+                                    <div class="testimonial-content">
+                                        <div class="quote-icon">"</div>
+                                        <p class="testimonial-text">
+                                            Liam's technical expertise and dedication helped us streamline our
+                                            government systems. Highly recommended!
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <strong>— Atty. David Cruz</strong>
+                                            <span>DILG Regional Director</span>
+                                        </div>
+                                        <div class="testimonial-stars">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 4 -->
+                                <div class="testimonial-item">
+                                    <div class="testimonial-content">
+                                        <div class="quote-icon">"</div>
+                                        <p class="testimonial-text">
+                                            One of the most talented IT graduates I've mentored. Liam has a bright
+                                            future in web development.
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <strong>— Prof. Maria Santos</strong>
+                                            <span>IT Department, TIP Manila</span>
+                                        </div>
+                                        <div class="testimonial-stars">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 5 -->
+                                <div class="testimonial-item">
+                                    <div class="testimonial-content">
+                                        <div class="quote-icon">"</div>
+                                        <p class="testimonial-text">
+                                            Liam's design skills are incredible. He created stunning graphics that
+                                            elevated our brand identity.
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <strong>— Mike Lim</strong>
+                                            <span>Marketing Director, BrandBoost</span>
+                                        </div>
+                                        <div class="testimonial-stars">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Duplicate for seamless loop -->
+                                <div class="testimonial-item">
+                                    <div class="testimonial-content">
+                                        <div class="quote-icon">"</div>
+                                        <p class="testimonial-text">
+                                            Liam is an exceptional developer! He delivered our project ahead of schedule
+                                            and exceeded all expectations.
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <strong>— John Reyes</strong>
+                                            <span>Project Manager, Tech Solutions Inc.</span>
+                                        </div>
+                                        <div class="testimonial-stars">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial-item">
+                                    <div class="testimonial-content">
+                                        <div class="quote-icon">"</div>
+                                        <p class="testimonial-text">
+                                            Working with Liam was a pleasure. His attention to detail and creative
+                                            problem-solving skills are top-notch.
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <strong>— Sarah Mendoza</strong>
+                                            <span>UI/UX Designer, CreativeHub</span>
+                                        </div>
+                                        <div class="testimonial-stars">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonies-footer">
+                            <span>⭐ 5.0 Average Rating</span>
+                            <span>•</span>
+                            <span>💬 15+ Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT CARD -->
+        <div class="card mt-3 mb-5 contact-card">
             <div class="card-body">
-                <h4 class="fw-bold mb-4">Contact</h4>
-                <div class="row g-3">
-                    <div class="col-12 col-sm-6">
-                        <a href="https://www.linkedin.com/in/liam-flores-a843983a6/"
-                            class="contact-pill linkedin w-100">
-                            <span>🔗</span> LinkedIn
-                        </a>
+                <div class="contact-header">
+                    <h4 class="fw-bold mb-2">Let's Connect</h4>
+                    <p class="contact-subtitle">Feel free to reach out for collaborations or just a chat</p>
+                </div>
+
+                <div class="contact-info-wrapper">
+                    <!-- Email Info -->
+                    <div class="contact-info-item">
+                        <div class="contact-icon email-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zM16 4.697v7.104l-5.803-3.558z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:liamjedmflores@email.com" class="contact-value">liamjedmflores@email.com</a>
+                        </div>
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <a href="https://www.facebook.com/liamjedd.flores" class="contact-pill facebook w-100">
-                            <span>📘</span> Facebook
-                        </a>
+
+                    <!-- Location Info -->
+                    <div class="contact-info-item">
+                        <div class="contact-icon location-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Location</span>
+                            <span class="contact-value">Pateros, Metro Manila</span>
+                        </div>
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <a href="https://www.tiktok.com/@.tamidesu" class="contact-pill tiktok w-100">
-                            <span>🎵</span> TikTok
-                        </a>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <a href="mailto:liamjedmflores@email.com" class="contact-pill email w-100">
-                            <span>✉️</span> Email
-                        </a>
-                    </div>
+                </div>
+
+                <div class="social-links-wrapper">
+                    <a href="https://www.linkedin.com/in/liam-flores-a843983a6/" target="_blank"
+                        class="social-btn linkedin-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://www.facebook.com/liamjedd.flores" target="_blank" class="social-btn facebook-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                        Facebook
+                    </a>
+                    <a href="https://www.tiktok.com/@.tamidesu" target="_blank" class="social-btn tiktok-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                        </svg>
+                        TikTok
+                    </a>
+                    <a href="mailto:liamjedmflores@email.com" class="social-btn email-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zM16 4.697v7.104l-5.803-3.558z" />
+                        </svg>
+                        Email Me
+                    </a>
+                </div>
+
+                <!-- Optional: Quick response note -->
+                <div class="contact-footer">
+                    <span>📱 Usually responds within 24 hours</span>
                 </div>
             </div>
         </div>
@@ -1017,6 +2361,25 @@
                 }
             });
         })();
+    </script>
+
+    <!-- Make sure Bootstrap JS is loaded and initialize carousel -->
+    <script>
+        // Ensure carousel works properly when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if Bootstrap is loaded
+            if (typeof bootstrap !== 'undefined') {
+                // Initialize carousel with proper settings
+                var carouselElement = document.querySelector('#projectsCarousel');
+                if (carouselElement) {
+                    new bootstrap.Carousel(carouselElement, {
+                        interval: 5000,
+                        wrap: true,
+                        ride: 'carousel'
+                    });
+                }
+            }
+        });
     </script>
 </body>
 
