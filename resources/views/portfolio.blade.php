@@ -1394,6 +1394,83 @@
         body.dark-mode .card-note-icon svg {
             stroke: #f59e0b;
         }
+
+        /* Availability Badge Styles */
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e8f5e9;
+            padding: 6px 14px;
+            border-radius: 50px;
+            margin-top: 12px;
+            width: fit-content;
+        }
+
+        .green-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
+        }
+
+        .availability-text {
+            font-size: 13px;
+            font-weight: 600;
+            color: #166534;
+        }
+
+        /* Dark mode support */
+        body.dark-mode .availability-badge {
+            background: #1a2a1a;
+        }
+
+        body.dark-mode .availability-text {
+            color: #4ade80;
+        }
+
+        body.dark-mode .green-dot {
+            background-color: #4ade80;
+            animation: pulseDark 2s infinite;
+        }
+
+        @keyframes pulseDark {
+            0% {
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .availability-badge {
+                margin: 12px auto 0;
+            }
+        }
     </style>
 </head>
 
@@ -1426,6 +1503,11 @@
                 </div>
                 <div class="skills">
                     IT \ Graphic Designer \ Looking for Opportunities
+                </div>
+                <!-- AVAILABLE FOR WORK BADGE - ADDED -->
+                <div class="availability-badge">
+                    <span class="green-dot"></span>
+                    <span class="availability-text">Available for work</span>
                 </div>
                 <div class="d-flex gap-2 mt-3 flex-wrap">
                     <a href="{{ asset('FloresCV.pdf') }}" download class="btn btn-dark btn-lg"
