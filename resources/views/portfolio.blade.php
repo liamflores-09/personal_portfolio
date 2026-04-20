@@ -1339,6 +1339,61 @@
                 display: none;
             }
         }
+
+        /* Card Note Styles */
+        .card-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin: 15px 0;
+            transition: all 0.2s ease;
+        }
+
+        .card-note-icon {
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .card-note-icon svg {
+            stroke: #f59e0b;
+        }
+
+        .card-note-content {
+            flex: 1;
+            font-size: 11px;
+            line-height: 1.45;
+            color: #92400e;
+        }
+
+        .card-note-content strong {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 12px;
+        }
+
+        .card-note:hover {
+            background: #fffbeb;
+            transform: translateX(3px);
+        }
+
+        /* Dark mode */
+        body.dark-mode .card-note {
+            background: #1e2a3a;
+            border-left-color: #f59e0b;
+        }
+
+        body.dark-mode .card-note-content {
+            color: #fcd34d;
+        }
+
+        body.dark-mode .card-note-icon svg {
+            stroke: #f59e0b;
+        }
     </style>
 </head>
 
@@ -1554,7 +1609,7 @@
                                                 the recruitment process for a local company, featuring job posting,
                                                 application management, and candidate tracking functionalities.
                                             </div>
-                                            <div class="project-tech">
+                                            <div class="project-tech-badges">
                                                 <span class="tech-badge">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                                                         viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1703,10 +1758,100 @@
                                             <div class="project-description">
                                                 Pilot Service for Yeyeniya, a Professional Player of Magic Chess: Go Go
                                             </div>
-                                            <div class="project-tech">
-                                                Ongoing
+                                            <div class="project-tech-badges">
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path
+                                                            d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                                                    </svg>
+                                                    Laravel
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    Bootstrap
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path
+                                                            d="M2 12a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2" />
+                                                        <path
+                                                            d="M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2" />
+                                                        <path d="M9 16v-8h3.5a2 2 0 1 1 0 4h-3.5h4a2 2 0 1 1 0 4h-4" />
+                                                    </svg>
+                                                    MySQL
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    JavaScript
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    HTML
+                                                </span>
+                                                <span class="tech-badge">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="badge-icon">
+                                                        <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5l16 0" />
+                                                        <path d="M7.5 8h3v8l-2 -1" />
+                                                        <path
+                                                            d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                                                    </svg>
+                                                    CSS
+                                                </span>
                                             </div>
-                                            <a href="https://yeyeniya.vercel.app" class="project-btn">View Project →</a>
+                                            <!-- CARD NOTE - ADDED -->
+                                            <div class="card-note">
+                                                <div class="card-note-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <circle cx="12" cy="12" r="10" />
+                                                        <line x1="12" y1="8" x2="12" y2="12" />
+                                                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                                                    </svg>
+                                                </div>
+                                                <div class="card-note-content">
+                                                    <strong>ℹFree Tier Notice</strong>
+                                                    This demo is hosted on a free web service (Vercel Hobby Plan). Due
+                                                    to platform limitations, the backend runs as a static HTML/CSS/JS
+                                                    frontend. The complete Laravel backend with full database
+                                                    functionality is available for demonstration upon request.
+                                                </div>
+                                            </div>
+                                            <a href="https://yeyeniya.vercel.app" class="project-btn">Live Demo →</a>
                                         </div>
                                     </div>
                                 </div>
