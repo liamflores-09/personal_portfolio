@@ -1695,8 +1695,8 @@
                                 <div class="carousel-item">
                                     <div class="project-card-carousel">
                                         <div class="project-image">
-                                            <img src="https://placehold.co/600x400/2c3e50/white?text=Yeyeniya's Pilot Service"
-                                                alt="Yeyeniya's Pilot Service">
+                                            <img src="{{ asset('images/yeyeniya.png') }}" alt="Yeyeniya's Pilot Service"
+                                                class="img-fluid rounded">
                                         </div>
                                         <div class="project-content">
                                             <div class="project-title">Yeyeniya's Pilot Service</div>
@@ -1706,7 +1706,7 @@
                                             <div class="project-tech">
                                                 Ongoing
                                             </div>
-                                            <a href="#" class="project-btn">View Project →</a>
+                                            <a href="https://yeyeniya.vercel.app" class="project-btn">View Project →</a>
                                         </div>
                                     </div>
                                 </div>
