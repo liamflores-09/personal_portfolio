@@ -1926,7 +1926,7 @@
                                                     </svg>
                                                 </div>
                                                 <div class="card-note-content">
-                                                    <strong>ℹFree Tier Notice</strong>
+                                                    <strong>Free Tier Notice</strong>
                                                     This demo is hosted on a free web service (Vercel Hobby Plan). Due
                                                     to platform limitations, the backend runs as a static HTML/CSS/JS
                                                     frontend. The complete Laravel backend with full database
