@@ -1988,17 +1988,17 @@
                                 <div class="timeline-dot"></div>
                                 <div class="ps-4 d-flex flex-column">
                                     <span style="font-size:18px; font-weight:600;">Graphics Designer</span>
-                                    <span style="font-size:16px; color:#555;">Highly Succeed Inc</span>
+                                    <span style="font-size:16px; color:#555;">Highly Succeed Inc / Unleash PH</span>
                                 </div>
-                                <span style="font-size:14px; color:#888;">2024</span>
+                                <span style="font-size:14px; color:#888;">2025</span>
                             </div>
                             <div class="d-flex justify-content-between position-relative">
                                 <div class="timeline-dot"></div>
                                 <div class="ps-4 d-flex flex-column">
-                                    <span style="font-size:18px; font-weight:600;">Internship / Projects</span>
-                                    <span style="font-size:16px; color:#555;">DILG / Unleash Graphics / HSI</span>
+                                    <span style="font-size:18px; font-weight:600;">Freelance Graphic Designer</span>
+                                    <span style="font-size:16px; color:#555;">Self-employed</span>
                                 </div>
-                                <span style="font-size:14px; color:#888;">2024</span>
+                                <span style="font-size:14px; color:#888;">2019</span>
                             </div>
                         </div>
                     </div>
