@@ -1396,7 +1396,7 @@
         }
 
         /* Availability Badge Styles */
-        .availability-badge {
+        /* .availability-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -1438,7 +1438,7 @@
         }
 
         /* Dark mode support */
-        body.dark-mode .availability-badge {
+        /* body.dark-mode .availability-badge {
             background: #1a2a1a;
         }
 
@@ -1463,12 +1463,232 @@
             100% {
                 box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
             }
+        } */
+
+        /* Responsive */
+        /* @media (max-width: 768px) {
+            .availability-badge {
+                margin: 12px auto 0;
+            }
+        } */ */
+
+        /* Experience Card Styles */
+        .experience-card {
+            border: none;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            /* padding-left: 10px;
+            padding-right: 10px; */
+        }
+
+        .experience-card:hover {
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Experience Item */
+        .experience-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .experience-item:first-child {
+            padding-top: 0;
+        }
+
+        /* Current Experience Highlight - NAVY BLUE GRADIENT */
+        .current-experience {
+            background: linear-gradient(135deg, #1a2a4f 0%, #0f1a33 100%);
+            margin: -8px -16px 0 -16px;
+            padding: 16px 20px;
+            border-radius: 16px;
+            border-left: 2px solid #0033ff;
+            position: relative;
+        }
+
+        /* Experience Header */
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .experience-title {
+            font-size: 17px;
+            font-weight: 700;
+            margin: 0;
+            color: #2a2a2a;
+        }
+        .experience-title-current {
+            color: #f0f0f0;
+            font-weight: 700;
+            display: flex;
+            font-size: 17px;
+        }
+
+        .experience-date {
+            font-size: 13px;
+            font-weight: 500;
+            color: #6c757d;
+            background: #f8f9fa;
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+
+        /* Current Badge */
+        .current-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #0033ff;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 50px;
+            letter-spacing: 0.3px;
+        }
+
+        .pulse-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse-white 1.5s infinite;
+        }
+
+        @keyframes pulse-white {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            70% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Experience Company */
+        .experience-company {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 6px;
+        }
+
+        .company-logo {
+            height: 22px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .company-dot {
+            width: 6px;
+            height: 6px;
+            background: #adb5bd;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .experience-company span:last-child {
+            font-size: 14px;
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        .current-experience .experience-company span:last-child {
+            color: #f0f0f0;
+            font-weight: 600;
+        }
+
+        /* Hover Effects */
+        .experience-item:not(.current-experience):hover {
+            transform: translateX(6px);
+            background: #f8f9fa;
+            margin-left: -8px;
+            padding-left: 8px;
+            border-radius: 12px;
+        }
+
+        /* Dark Mode */
+        body.dark-mode .experience-card {
+            background: #1e1e1e;
+        }
+
+        body.dark-mode .experience-item {
+            border-bottom-color: #2a2a2a;
+        }
+
+        body.dark-mode .experience-title {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .experience-date {
+            background: #2a2a2a;
+            color: #aaa;
+        }
+
+        body.dark-mode .current-experience {
+            background: linear-gradient(135deg, #1a2a4f 0%, #0f1a33 100%);
+        }
+
+        body.dark-mode .current-experience .experience-title {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .current-experience .experience-company span:last-child {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .experience-company span:last-child {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .company-dot {
+            background: #555;
+        }
+
+        body.dark-mode .experience-item:not(.current-experience):hover {
+            background: #2a2a2a;
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .availability-badge {
-                margin: 12px auto 0;
+        @media (max-width: 576px) {
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+
+            .current-experience {
+                margin: -8px -12px 0 -12px;
+                padding: 14px 16px;
+            }
+
+            .experience-title {
+                font-size: 16px;
+            }
+
+            .experience-date {
+                font-size: 11px;
             }
         }
     </style>
@@ -1502,13 +1722,13 @@
                     Pateros, Metro Manila
                 </div>
                 <div class="skills">
-                    IT \ Graphic Designer \ Looking for Opportunities
+                    IT \ Graphic Designer \ E-commerce Content Associate
                 </div>
                 <!-- AVAILABLE FOR WORK BADGE - ADDED -->
-                <div class="availability-badge">
+                <!-- <div class="availability-badge">
                     <span class="green-dot"></span>
                     <span class="availability-text">Available for work</span>
-                </div>
+                </div> -->
                 <div class="d-flex gap-2 mt-3 flex-wrap">
                     <a href="{{ asset('FloresCV.pdf') }}" download class="btn btn-dark btn-lg"
                         style="flex:1; min-width:140px;">
@@ -1970,35 +2190,66 @@
             <!-- RIGHT COLUMN (5 on md+) -->
             <div class="col-md-5 d-flex flex-column">
                 <!-- EXPERIENCE CARD -->
-                <div class="card">
+                <div class="card experience-card">
                     <div class="card-body">
-                        <h4 class="fw-bold mb-4">Experience</h4>
-                        <div class="position-relative">
-                            <div class="position-absolute top-0 bottom-0 border-start border-2" style="left: 10px;">
-                            </div>
-                            <div class="d-flex justify-content-between mb-4 position-relative">
-                                <div class="timeline-dot"></div>
-                                <div class="ps-4 d-flex flex-column">
-                                    <span style="font-size:18px; font-weight:600;">Web Developer</span>
-                                    <span style="font-size:16px; color:#555;">Highly Succeed Inc</span>
+                        <h4 class="fw-bold mb-4">
+                            <i class="fas fa-briefcase me-2"></i> Experience
+                        </h4>
+
+                        <!-- Current Experience - Highlighted -->
+                        <div class="experience-item current-experience">
+                            <div class="experience-header">
+                                <div class="experience-title-wrapper">
+                                    <h5 class="experience-title-current">E-commerce Content Associate</h5>
+                                    <!-- <span class="current-badge">
+                                        <span class="pulse-dot"></span>
+                                        Present
+                                    </span> -->
                                 </div>
-                                <span style="font-size:14px; color:#888;">2025</span>
+                                <div><span class="current-badge">
+                                        <span class="pulse-dot"></span>
+                                        Present
+                                    </span></div>
                             </div>
-                            <div class="d-flex justify-content-between mb-4 position-relative">
-                                <div class="timeline-dot"></div>
-                                <div class="ps-4 d-flex flex-column">
-                                    <span style="font-size:18px; font-weight:600;">Graphics Designer</span>
-                                    <span style="font-size:16px; color:#555;">Highly Succeed Inc / Unleash PH</span>
-                                </div>
-                                <span style="font-size:14px; color:#888;">2025</span>
+                            <div class="experience-company">
+                                <img src="{{ asset('images/jg.png') }}" alt="JG Superstore" class="company-logo">
+                                <span>JG Superstore</span>
                             </div>
-                            <div class="d-flex justify-content-between position-relative">
-                                <div class="timeline-dot"></div>
-                                <div class="ps-4 d-flex flex-column">
-                                    <span style="font-size:18px; font-weight:600;">Freelance Graphic Designer</span>
-                                    <span style="font-size:16px; color:#555;">Self-employed</span>
-                                </div>
-                                <span style="font-size:14px; color:#888;">2019</span>
+                        </div>
+
+                        <!-- Web Developer -->
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h5 class="experience-title">Web Developer</h5>
+                                <div class="experience-date">2025</div>
+                            </div>
+                            <div class="experience-company">
+                                <span class="company-dot"></span>
+                                <span>Highly Succeed Inc</span>
+                            </div>
+                        </div>
+
+                        <!-- Graphics Designer -->
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h5 class="experience-title">Graphics Designer</h5>
+                                <div class="experience-date">2025</div>
+                            </div>
+                            <div class="experience-company">
+                                <span class="company-dot"></span>
+                                <span>Highly Succeed Inc / Unleash PH</span>
+                            </div>
+                        </div>
+
+                        <!-- Freelance Graphic Designer -->
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h5 class="experience-title">Freelance Graphic Designer</h5>
+                                <div class="experience-date">2019</div>
+                            </div>
+                            <div class="experience-company">
+                                <span class="company-dot"></span>
+                                <span>Self-employed</span>
                             </div>
                         </div>
                     </div>
