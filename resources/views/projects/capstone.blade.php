@@ -12,11 +12,34 @@
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Nunito Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    <!-- Fonts: Inter + Nunito Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <style>
+        /* ============================================================
+           COLOR TOKENS — Additive, no layout changes
+           ============================================================ */
+        :root {
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --accent-light: #eff6ff;
+            --accent-dark: #1e40af;
+            --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body.dark-mode {
+            --bg: #0b0f19;
+            --bg-card: #111827;
+            --bg-elevated: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #64748b;
+            --border: #1e293b;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -29,6 +52,7 @@
             color: #1e293b;
             line-height: 1.5;
             overflow-x: hidden;
+            transition: background 0.4s ease, color 0.4s ease;
         }
 
         .project-hero {
@@ -85,8 +109,8 @@
 
         .back-btn:hover {
             transform: translateX(-5px);
-            color: #1e293b;
-            background: white;
+            color: white;
+            background: var(--accent, #2563eb);
         }
 
         .notice-banner {
@@ -107,7 +131,7 @@
 
         .notice-banner .notice-text {
             flex: 1;
-            color: #856404;
+            color: #92400e;
             font-size: 14px;
             font-weight: 500;
         }
@@ -122,7 +146,7 @@
         }
 
         body.dark-mode .notice-banner .notice-text {
-            color: #ffd970;
+            color: #fcd34d;
         }
 
         .info-card {
@@ -141,11 +165,13 @@
         }
 
         .card-title {
+            font-family: 'Inter', sans-serif;
             font-size: 20px;
             font-weight: 800;
             margin-bottom: 24px;
-            border-left: 4px solid #111;
+            border-left: 4px solid var(--accent, #2563eb);
             padding-left: 14px;
+            letter-spacing: -0.02em;
         }
 
         .info-row {
@@ -173,7 +199,7 @@
         }
 
         .timeline-badge {
-            background: linear-gradient(135deg, #111 0%, #333 100%);
+            background: linear-gradient(135deg, var(--accent, #2563eb) 0%, var(--accent-hover, #1d4ed8) 100%);
             color: white;
             padding: 4px 12px;
             border-radius: 50px;
@@ -229,7 +255,7 @@
         }
 
         .tech-item:hover {
-            background: #111;
+            background: var(--accent, #2563eb);
             color: white;
             transform: translateY(-2px);
         }
@@ -317,7 +343,7 @@
             font-size: 28px;
             flex-shrink: 0;
             width: 48px;
-            color: #111;
+            color: var(--accent, #2563eb);
         }
 
         .objective-text h5 {
@@ -334,12 +360,14 @@
         }
 
         .section-title {
+            font-family: 'Inter', sans-serif;
             font-size: 28px;
             font-weight: 800;
             margin-bottom: 28px;
             display: flex;
             align-items: center;
             gap: 12px;
+            letter-spacing: -0.02em;
         }
 
         .section-title::after {
@@ -386,7 +414,13 @@
             line-height: 64px;
             text-align: center;
             border-radius: 20px;
-            color: #111;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            background: var(--accent, #2563eb);
+            color: white;
         }
 
         .feature-card h5 {
@@ -428,6 +462,10 @@
         body.dark-mode .feature-icon {
             background: linear-gradient(135deg, #2a2a2a 0%, #333 100%);
             color: #ddd;
+        }
+        body.dark-mode .feature-card:hover .feature-icon {
+            background: var(--accent, #2563eb);
+            color: white;
         }
 
         body.dark-mode .tech-item:hover {
@@ -494,7 +532,7 @@
         }
 
         .screenshot-tab.active {
-            background: #111;
+            background: var(--accent, #2563eb);
             color: white;
         }
 
@@ -777,6 +815,142 @@
             .screenshot-tab {
                 padding: 6px 14px;font-size: 12px; }
         }
+
+        /* ============================================================
+           DARK MODE — Colors only, no layout changes
+           ============================================================ */
+        body.dark-mode {
+            background: #0b0f19;
+            color: #f1f5f9;
+        }
+        body.dark-mode .info-card,
+        body.dark-mode .timeline-card {
+            background: #111827;
+            border-color: #1e293b;
+        }
+        body.dark-mode .info-row,
+        body.dark-mode .collaborators-list li,
+        body.dark-mode .timeline-item-compact {
+            border-bottom-color: #1e293b;
+        }
+        body.dark-mode .info-value,
+        body.dark-mode .timeline-value {
+            color: #e2e8f0;
+        }
+        body.dark-mode .info-label,
+        body.dark-mode .timeline-label {
+            color: #64748b;
+        }
+        body.dark-mode .collaborator-icon,
+        body.dark-mode .tech-item {
+            background: rgba(37, 99, 235, 0.1);
+            color: #93c5fd;
+        }
+        body.dark-mode .feature-card {
+            background: #111827;
+            border-color: #1e293b;
+        }
+        body.dark-mode .feature-card p {
+            color: #94a3b8;
+        }
+        body.dark-mode .objective-item {
+            background: #1e293b;
+        }
+        body.dark-mode .objective-item:hover {
+            background: #253349;
+        }
+        body.dark-mode .objective-text p {
+            color: #94a3b8;
+        }
+        body.dark-mode .card-title {
+            border-left-color: var(--accent, #2563eb);
+        }
+        body.dark-mode .screenshot-tabs {
+            border-bottom-color: #1e293b;
+        }
+        body.dark-mode .screenshot-tab {
+            color: #64748b;
+        }
+        body.dark-mode .screenshot-tab:hover {
+            color: #f1f5f9;
+            background: #1e293b;
+        }
+        body.dark-mode .screenshot-tab.active {
+            background: var(--accent, #2563eb);
+            color: white;
+        }
+        body.dark-mode .browser-mockup {
+            background: #1e293b;
+        }
+        body.dark-mode .browser-bar {
+            background: #1e293b;
+            border-bottom-color: #2d3a4f;
+        }
+        body.dark-mode .browser-url {
+            background: #111827;
+            color: #64748b;
+        }
+        body.dark-mode .screenshot-card {
+            background: #111827;
+            border-color: #1e293b;
+        }
+        body.dark-mode .screenshot-info h5 {
+            color: #f1f5f9;
+        }
+        body.dark-mode .screenshot-info p {
+            color: #94a3b8;
+        }
+        body.dark-mode .tag {
+            background: rgba(37, 99, 235, 0.1);
+            color: #93c5fd;
+        }
+
+        /* ============================================================
+           BACK TO TOP
+           ============================================================ */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            background: var(--accent, #2563eb);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.2);
+            z-index: 100;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(37, 99, 235, 0.35);
+        }
+
+        /* ============================================================
+           SCROLL REVEAL
+           ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
@@ -806,7 +980,7 @@
         <!-- ============================================================ -->
         <!-- SECTION 1: PROJECT OVERVIEW + TECH STACK + TIMELINE -->
         <!-- ============================================================ -->
-        <div class="two-column-equal">
+        <div class="two-column-equal reveal">
             <div class="left-card">
                 <div class="info-card" style="height: 100%;">
                     <h4 class="card-title"><i class="fas fa-clipboard-list me-2"></i> Project Overview</h4>
@@ -861,7 +1035,7 @@
         <!-- ============================================================ -->
         <!-- SECTION 2: SYSTEM OBJECTIVES -->
         <!-- ============================================================ -->
-        <div class="row mb-5">
+        <div class="row mb-5 reveal">
             <div class="col-12">
                 <div class="info-card">
                     <h4 class="card-title"><i class="fas fa-bullseye me-2"></i> System Objectives</h4>
@@ -880,7 +1054,7 @@
         <!-- ============================================================ -->
         <!-- SECTION 3: KEY FEATURES -->
         <!-- ============================================================ -->
-        <div class="mb-5">
+        <div class="mb-5 reveal">
             <h4 class="section-title"><i class="fas fa-star me-2"></i> Key Features</h4>
             <div class="features-grid">
                 <div class="feature-card"><div class="feature-icon"><i class="fas fa-file-upload"></i></div><h5>Resume Parsing</h5><p>Extract and analyze key information from resumes</p></div>
@@ -899,7 +1073,7 @@
         <!-- ============================================================ -->
         <!-- SECTION 4: PROJECT SCREENSHOTS -->
         <!-- ============================================================ -->
-        <div class="mb-5">
+        <div class="mb-5 reveal">
             <h4 class="section-title"><i class="fas fa-camera me-2"></i> Project Screenshots</h4>
 
             <ul class="screenshot-tabs" id="screenshotTab" role="tablist">
@@ -1093,11 +1267,43 @@
         </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        if (localStorage.getItem("theme") === "dark") {
-            document.body.classList.add("dark-mode");
-        }
+        (function () {
+            // Apply theme from portfolio page
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+
+            // Scroll Reveal
+            var reveals = document.querySelectorAll(".reveal");
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("revealed");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
+            reveals.forEach(function (el) { observer.observe(el); });
+
+            // Back to Top
+            var backToTop = document.getElementById("backToTop");
+            window.addEventListener("scroll", function () {
+                backToTop.classList.toggle("visible", window.scrollY > 400);
+            }, { passive: true });
+            backToTop.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        })();
     </script>
 </body>
 
